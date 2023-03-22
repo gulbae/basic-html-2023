@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>구조 선택자(메뉴)</title>
+    <style>
+        ul {
+            overflow: hidden;
+        }
+        li {
+            list-style: none; /* none : 점 삭제 */
+            float: left;
+            padding: 10px;
+        }
+        li:nth-child(2n+1) { /* 홀수메뉴 */
+            background-color: rgba(233, 150, 122, 0.25);
+        }
+        li:nth-child(2n) { /* 짝수메뉴 */
+            background-color: rgba(251, 110, 63, 0.583);
+        }
+        li:first-child{
+            border-radius: 10px 0px 0px 10px;
+        }
+        li:last-child{
+            border-radius: 0px 10px 10px 0px;
+        }
+        li:hover{
+            color: rgba(245, 245, 245, 0.956);
+        }
+        #first {
+            background-color: red; 
+            float: left;
+            width:100px; height: 100px;
+        }
+        #second {
+            background-color: rgb(255, 153, 0); 
+            float: left;
+            width:100px; height: 100px;
+        }
+        #third {
+            background-color: rgb(242, 255, 0); 
+            float: left;
+            width:100px; height: 100px;
+        }
+        #forth {
+            background-color: rgb(30, 218, 55); 
+            float: left;
+            width:100px; height: 100px;
+        }
+        #fifth {
+            background-color: rgb(92, 155, 238); 
+            float: left;
+            width:100px; height: 100px;
+        }
+        #sixth {
+            background-color: rgb(48, 91, 189); 
+            float: left;
+            width:100px; height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Product</li>
+        <li>Service</li>
+        <li>Portfolio</li>
+        <li>Board</li>
+        <li>Contact</li>
+    </ul>
+    <div id="first"></div>
+    <div id="second"></div>
+    <div id="third"></div>
+    <div id="forth"></div>
+    <div id="fifth"></div>
+    <div id="sixth"></div>
+</body>
+</html>
