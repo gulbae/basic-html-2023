@@ -36,8 +36,8 @@ Java 개발자 과정 프론트엔드 리포지토리
     - Javascript 기초
 
 4일차 그리드레이아웃 포토갤러리
-   
-<img src="https://raw.githubusercontent.com/gulbae/basic-html-2023/main/image/gallery.png" width="600"> 
+
+<img src="https://raw.githubusercontent.com/gulbae/basic-html-2023/main/image/gallery01.png" width="600"> 
 
 ## 5일차
 - 프론트엔드 학습
