@@ -2,6 +2,7 @@
 /* 구글폰트로 웹사이트 글자체 변경 */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;500;600;700;900&display=swap');
 
+/* 모든 페이지에 적용 */
 * {
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
@@ -19,6 +20,7 @@ a {
     color: #64a19d;
 }
 
+/* 가로줄 hr 설정 */
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -27,6 +29,7 @@ hr {
     opacity: 0.25;
 }
 
+/* 글자 수정 */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -34,8 +37,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+/* h1에 대한 글자 크기 적용*/
 h1 {
-    font-size: calc(1.375rem + 1.5vw); /* 계산으로 넓이를 변경 */
+    font-size: calc(1.5rem + 1.5vw); /* 계산으로 넓이를 변경 */
 }
 @media screen and (min-width:1200px) {
     h1 {
@@ -43,6 +47,7 @@ h1 {
     }
 }
 
+/* h2에 대한 글자 크기 적용*/
 h1 {
     font-size: calc(1.3rem + 0.9vw); /* 계산으로 넓이를 변경 */
 }
@@ -52,39 +57,47 @@ h1 {
     }
 }
 
+/* p 태그에 대한 수정*/
 p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
+/* 목록 설정*/
 ol, ul {
     padding-left: 2rem;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
+/* 이미지 설정 */
 img {
     vertical-align: middle;
 }
 
+/* 웹페이지 하단영역 */
 .footer {
     padding: 5rem 0;
 }
 
+/* 하단부 띄우기*/
 .contact-section {
     padding-top: 5rem;
 }
 
+/* card 밑에 색상넣기 */
 .contact-section .card {
     border: 0;
     border-bottom: 0.25rem solid #64a19d;
 }
 
+/* card의 글자 설정 변경하기 (address, email, phone)*/
 .contact-section .card h4 {
     font-size: 0.8rem;
     letter-spacing: 0.15rem;
 }
 
+/* card의 가로줄 설정 변경하기 */
 .contact-section .card hr {
     opacity: 1;
     border-color: #64a19d;
@@ -92,10 +105,12 @@ img {
     width: 3rem;
 }
 
+/* 트위터 페북 깃헙을 card로 부터 떨어트리기*/
 .contact-section .social {
     margin-top: 5rem;
 }
 
+/* 트위처 페북 깃헙 로고 설정 변경*/
 .contact-section .social a {
     text-align: center;
     width: 3rem; height: 3rem;
@@ -105,14 +120,17 @@ img {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* 로고 마우스 올렸을시 색상 변경*/
 .contact-section .social a:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* 로고 클릭시 색상변경*/
 .contact-section .social a:active {
     color: white;
 }
 
+/* 사진과 Subscribe!! 사이 여백 및 설정*/
 .signup-section {
     padding: 10rem;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%),
@@ -123,7 +141,7 @@ img {
     background-size: cover;
 }
 
-
+/* 이메일 입력창 설정*/
 .signup-section .form-signup input {
     box-shadow: 0 0.19rem 0.19rem 0 rgba(0, 0, 0, 0.1) !important; /* !important = 무조건 적용되어야 하는 스타일 */
     padding: 1.25rem 2rem;
@@ -133,6 +151,7 @@ img {
     border: 0;
 }
 
+/* send email button 설정*/
 .btn {
     --bs-btn-bg: #64a19d;
     box-shadow: 0 0.19rem 0.19rem 0 rgba(0, 0, 0, 0.1) !important; /* !important = 무조건 적용되어야 하는 스타일 */
@@ -143,14 +162,17 @@ img {
     border: 0;
 }
 
+/* send email 버튼에 마우스 올렸을때 반응*/
 .btn:hover {
     background-color: #558985;
 }
 
+/* address, email, phone 색상 변경 */
 .custom-color {
     color: #64a19d;
 }
 
+/* 여백주기*/
 .portfolios-section {
     padding: 10rem 0;
 }
@@ -164,6 +186,7 @@ img {
     font-size: 90%;
 }
 
+/* 크기에 따른 화면 설정*/
 @media screen and (min-width : 992px) {
     .portfolios-section .featured-text {
         padding: 0 0 0 2rem;
@@ -175,6 +198,7 @@ img {
     }
 }
 
+/* ipad 화면 설정*/
 .about-section {
     padding-top: 10rem;
     background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
@@ -184,6 +208,7 @@ img {
     margin-bottom: 5rem;
 }
 
+/* 제일 윗부분 여백*/
 .masterHead {
     position: relative;
     width: 100vw;
@@ -198,6 +223,7 @@ img {
     background-size: cover;
 }
 
+/* GrayScale 글자 관련*/
 .masterHead h1 {
     font-size: 5rem;
     line-height: 5rem;
@@ -219,7 +245,7 @@ img {
     background-color: #fff;
 }
 
-#mainNav nav-toggler {
+#mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
     color: #64a19d;
@@ -262,21 +288,22 @@ img {
         padding: 0.5rem 0;
     }
 
-    #mainNav .navbar-link {
+    #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba( 255, 255, 255, 0.5);
     }
 
-    #mainNav .navbar-link:hover {
+    #mainNav .nav-link:hover {
         color: rgba( 255, 255, 255, 0.8);
     }
     
-    #mainNav .navbar-link:active {
+    #mainNav .nav-link:active {
         color: white
     } 
 
     /* js에서 처리하는 메뉴부분 시작 */
+    /* 상단바 이동시 표현 */
     /* 없는 클래스를 만드는 것이기 때문에 #mainNav .navbar-shrink 사이에 공백이 있으면 절대안됨 */
     #mainNav.navbar-shrink {
         background-color: white;
@@ -300,12 +327,11 @@ img {
         color: #467370;
     }
 
-    #mainNav.navbar-shrink .nav-link:active {
+    #mainNav.navbar-shrink .nav-link.active {
         color: #64a19d;
         outline: none;
         border-bottom: 0.25rem solid #64a19d;
     }
-
     /* js에서 처리하는 메뉴부분 끝 */
 }
 

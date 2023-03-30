@@ -16,6 +16,27 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
             integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src='script/parallax.js'></script>
+    <script>
+        // 최초
+        $(document).ready(function (){
+            var image = document.getElementById('hill1');
+            $('.contents').css({
+                'position': 'absolute',
+                'top': image.height + 'px'
+            });
+        });
+        
+        // 브라우저 사이즈 바뀔때마다
+        $(window).resize(function() {
+            var image = document.getElementById('hill1');
+            console.log(`${image.width} x ${image.height}`);
+
+            $('.contents').css({
+                'position': 'absolute',
+                'top': image.height + 'px'
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -48,7 +69,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eos magni unde, modi eligendi facere dolores exercitationem harum asperiores! Ea debitis reprehenderit at molestiae adipisci modi commodi voluptate architecto laboriosam placeat aliquam porro dicta tempora soluta assumenda, distinctio, corporis rerum nam sapiente voluptas esse deleniti hic aspernatur laborum. Officia dolor ipsum assumenda accusantium ducimus quas in at itaque quaerat, sed consequatur. Est explicabo et qui velit dolorem aspernatur similique ad sapiente molestiae dolores. Mollitia repellendus natus vel deserunt distinctio ipsa nesciunt enim quibusdam, animi quia qui reprehenderit aperiam consequatur rerum, cupiditate sit tempora. Cupiditate optio dolorem in, alias eveniet esse.</p>
     </section>
 
-    <footer>
+    <!-- <footer>
         <nav>
             <a>Blog</a>
             <span> | </span>
@@ -60,7 +81,7 @@
             <span>email : esw2782@gmail.com</span><br>
             <span>Copyright &copy; 2022. Codehal. All Right Reserved</span>
         </p>
-    </footer>
+    </footer> -->
 
 
     <!-- 2. Bootstrap용 js는 body에 위치해야 함! -->
