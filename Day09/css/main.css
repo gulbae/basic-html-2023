@@ -18,6 +18,10 @@ hr {
     opacity: 0.25;
 }
 
+label {
+    display: inline-block;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -49,13 +53,22 @@ p {
     display: flex;
 }
 
+/* #layoutLeftSide { //~님 로그인중 안보임 
+    position: fixed;
+    top: 56px;
+    left: 0;
+} */
+
 #layoutTotal #layoutLeftSide {
     flex-basis: 225px;
     flex-shrink: 0;
     transition: transform 0.15s ease-in-out;
     z-index: 1000;
     /* transform:  translateX(-225px); 화면 왼쪽으로 사라지게 하기 위함 */
-    
+}
+
+.sb-sidenav-toggled #layoutTotal #layoutLeftSide {
+    transform: translateX(-225px)
 }
 
 #layoutTotal #layoutContent {
@@ -82,8 +95,18 @@ p {
     margin: 0;
 }
 
-.sb-topnav #sidebarToggle {
+.sb-topnav.navbar-dark #sidebarToggle {
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* .sb-topnav.navbar-dark #sidebarToggle:hover {
+    color: rgba(255, 255, 255, 0.5);
+    transform: rotate(-180deg);
+
+} */
+
+.sb-topnav.navbar-light #sidebarToggle {
+    color: #212529;
 }
 
 /* 왼쪽메뉴 */
@@ -133,16 +156,133 @@ p {
     transform: rotate(-90deg);
 }
 
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-nested {
+    margin-left: 1.5rem;
+    flex-direction: column;
+}
+
 .sb-sidenav .sb-sidenav-footer {
     padding: 0.75rem;
     flex-shrink: 0;
 }
 
+/* 왼쪽메뉴 디자인 */
 .sb-sidenav-dark {
     background-color: #212529;
     color: rgba(255, 255, 255, 0.5);
 }
 
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover,
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:active {
+    color: white;
+    font-weight: 600;
+}
+
+/* 왼쪽메뉴 아이콘 색상 */
+.sb-sidenav-dark .sb-sidenav-menu .sb-nav-link-icon {
+    color: rgba(255, 255, 255, 0.25); /* 각 메뉴의 아이콘은 글자보다 좀 어둡게 */
+}
+
 .sb-sidenav-dark .sb-sidenav-footer {
     background-color: #343a40;
+}
+
+/* simple-datatables 영역 */
+.datatable-input,
+.datatable-selector {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /* text-transform: uppercase; */
+    color: #212529;
+    background-color: #f9f9f9;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.datatable-input:focus,
+.datatable-selector:focus {
+    color: #212529;
+    background-color: white;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow : 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.datatable-container {
+    font-size: 0.875rem;
+
+}
+
+.datatable-table {
+    border-collapse: collapse;
+    --bs-table-color: #dee2e6;
+    --bs-table-bg:transparent;
+    --bs-table-border-color:#dee2e6;
+    border-color: #DEE2E6;
+    border: solid 1px #dee2e6;
+}
+
+.datatable-pagination ul{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-x: 0.375rem;
+    --bs-pagination-font-size : 1rem;
+    --bs-pagination-color : var(--bs-ling-color);
+    --bs-pagination-bg: #fff;
+    --bs-pagination-border-width:1px;
+    --bs-pagination-border-color:#dee2e6;
+    --bs-pagination-border-radius:0.375rem;
+    --bs-pagination-hover-color:var(--bs-link-hover-color);
+    --bs-pagination-hover-bg :#e9ecef;
+    --bs-pagination-hover-border-color: #dee2e6;
+    --bs-pagination-focus-color: var(--bs-link-hover-color);
+    --bs-pagination-focus-bg: #e9ecef;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #0d6efd;
+    --bs-pagination-active-border-color: #0d6efd;
+    --bs-pagination-disabled-color: #6c757d;
+    --bs-pagination-disabled-bg: #fff;
+    --bs-pagination-disabled-border-color: #dee2e6;
+}
+
+.datatable-pagination a{
+    color: var(--bs-pagination-color);
+    display: block;
+    font-size: var(--bs-pagination-font-size);
+    text-decoration: none;
+    background-color: var(--bs-pagination-bg);
+    border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+}
+
+.datatable-pagination li:not(:first-child) a {
+    margin-left: -1px;
+}
+
+.datatable-pagination li:first-child,
+.datatable-pagination li:first-child a {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.datatable-pagination li:last-child,
+.datatable-pagination li:last-child a {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
