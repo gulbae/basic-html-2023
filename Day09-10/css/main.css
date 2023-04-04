@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1.90rem;
+    margin-bottom: 1.0rem;
 }
 
 .sb-nav-fixed #layoutLeftSide .sb-topnav {
@@ -61,8 +61,8 @@ p {
 }
 
 .sb-nav-fixed #layoutTotal #layoutContent {
-    padding-left: 225px;
-    top: 56px;
+    /* padding-left: 225px; */
+    /* top: 56px; */
 }
 
 /* 전체 레이아웃 */
@@ -125,7 +125,7 @@ p {
     justify-content: space-between;
     min-width: 0;
     flex-grow: 1;
-    min-height: 100vh; /* calc(100vh - 56px */
+    min-height:  calc(100vh - 56px);
     /* margin-left: -225px; */
 }
 /* 전체 레이아웃 끝 */
@@ -279,7 +279,7 @@ p {
 
 .datatable-table {
     border-collapse: collapse;
-    --bs-table-color: var(--bs-body-color);
+    --bs-table-color: #dee2e6;
     /* border-collapse는 표(table)의 테두리와 셀(td)의 테두리 사이의 간격을 어떻게 처리할 지 정합니다. */
     /* separate : 표(table)의 테두리와 셀(td)의 테두리 사이에 간격을 둡니다.
         collapse : 표(table)의 테두리와 셀(td)의 테두리 사이의 간격을 없앱니다. 겹치는 부분은 한 줄로 나타냅니다.
@@ -299,7 +299,7 @@ p {
     --bs-pagination-padding-x: 0.75rem;
     --bs-pagination-padding-x: 0.375rem;
     --bs-pagination-font-size : 1rem;
-    --bs-pagination-color : var(--bs-ling-color);
+    --bs-pagination-color : var(--bs-link-color);
     --bs-pagination-bg: #fff;
     --bs-pagination-border-width:1px;
     --bs-pagination-border-color:#dee2e6;
@@ -352,9 +352,13 @@ p {
 
 #layoutError #layoutError_content{
     min-width: 0;
-    flex-grow: 1;
+    flex-grow: 1; /* 컨텐츠 나머지 영역을 제일 밑으로*/
 }
 
 #layoutError #layoutError_footer{
     min-width: 0;
 }
+
+.img-error {
+    max-width: 20rem;
+  }
