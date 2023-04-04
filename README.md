@@ -103,7 +103,11 @@ SB Admin Page 중간단계
 
 ## 11일차
 - 프론트엔드 실습
-    -
+    - Dream Jeju 마무리
+
+Dream Jeju     
+
+<img src="https://raw.githubusercontent.com/gulbae/basic-html-2023/main/image/portfolio5.png" width="700"> 
 
 ## 12일차
 - 프론트엔드 실습
